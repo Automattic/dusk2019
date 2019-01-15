@@ -404,7 +404,7 @@ body {
   color: #fff;
   font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-weight: 400;
-  font-size: 0.88889em;
+  font-size: 1em;
   line-height: 1.8;
   margin: 0;
   text-rendering: optimizeLegibility;
@@ -504,21 +504,11 @@ h2 {
   font-size: 1.125em;
 }
 
-@media only screen and (min-width: 768px) {
-  .entry-title,
-  .not-found .page-title,
-  .error-404 .page-title,
-  .has-larger-font-size,
-  h2 {
-    font-size: 1.125em;
-  }
-}
-
 .has-regular-font-size,
 .has-large-font-size,
 .comments-title,
 h3 {
-  font-size: 1.125em;
+  font-size: 22px;
 }
 
 .site-title,
@@ -531,14 +521,14 @@ h3 {
 h2.author-title,
 p.author-bio,
 h4 {
-  font-size: 1.125em;
+  font-size: 0.88889em;
 }
 
 .main-navigation,
 .pagination .nav-links,
 .comment-content,
 h5 {
-  font-size: 0.88889em;
+  font-size: 0.71111em;
 }
 
 .main-navigation .sub-menu,
@@ -554,7 +544,7 @@ h5 {
 #cancel-comment-reply-link,
 img:after,
 h6 {
-  font-size: 0.71111em;
+  font-size: 0.59259em;
 }
 
 .site-title,
