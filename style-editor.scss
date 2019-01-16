@@ -10,7 +10,7 @@ Twenty Nineteen Editor Styles
 /** === Editor Frame === */
 
 body {
-	backround: $color__background-body;
+	background-color: $color__background-body;
 
 	.wp-block[data-align="full"] {
 		width: 100%;
@@ -31,14 +31,8 @@ body {
 			margin: 0 10%;
 		}
 
-		.editor-post-title__block,
-		.editor-default-block-appender,
-		.editor-block-list__block {
-			margin-left: 0;
-			margin-right: 0;
-		}
-
 		.wp-block[data-align="wide"] {
+			max-width: 994px; /* 964px + 30px for padding */
 			width: 100%;
 		}
 
@@ -58,16 +52,8 @@ body {
 /** === Content Width === */
 
 .wp-block {
-	width: calc(100vw - (2 * #{$size__spacing-unit}));
+	width: 680px; /* 650px plus 30px for padding */
 	max-width: 100%;
-
-	@include media(tablet) {
-		width: calc(8 * (100vw / 12));
-	}
-
-	@include media(desktop) {
-		width: calc(6 * (100vw / 12 ));
-	}
 
 	// Only the top level blocks need specific widths, therefore override for every nested block.
 	.wp-block {
@@ -78,10 +64,14 @@ body {
 /** === Base Typography === */
 
 body {
-	font-size: $font__size_base;
-	font-family: $font__body;
-	line-height: $font__line-height-body;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	color: $color__text-main;
+	font-family: $font__body;
+	font-weight: 400;
+	font-size: $font__size_base;
+	line-height: $font__line-height-body;
+	text-rendering: optimizeLegibility;
 }
 
 p {
@@ -95,7 +85,8 @@ h4,
 h5,
 h6 {
 	font-family: $font__heading;
-	font-weight: 700;
+	font-weight: 400;
+	text-align: center
 }
 
 h1 {
@@ -105,19 +96,35 @@ h1 {
 	@include media(tablet) {
 		font-size: $font__size-xxl;
 	}
+
+	&:before {
+		background-color: $color__border;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 110px;
+		width: 100%;
+	}
 }
 
 h2 {
-	font-size: $font__size-lg;
+	font-size: $font__size-md;
 	@include post-section-dash;
 
 	@include media(tablet) {
-		font-size: $font__size-xl;
+		font-size: $font__size-md;
+	}
+
+	&:before {
+		background-color: $color__border;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 110px;
+		width: 100%;
 	}
 }
 
 h3 {
-	font-size: $font__size-lg;
+	font-size: $font__size-md;
 }
 
 h4 {
@@ -199,21 +206,13 @@ figcaption,
 /** === Post Title === */
 
 .editor-post-title__block {
-	@include post-section-dash;
 
-	&:before {
-		width: $font__size-xxl;
-		margin-top: 0;
-		margin-bottom: 0;
-		margin-left: 1em;
-		position: relative;
-		top: 0.5em;
-	}
+	font-size: $font__size_base;
 
 	.editor-post-title__input {
 		font-family: $font__heading;
-		font-size: $font__size-xxl;
-		font-weight: 700;
+		font-size: $font__size-md;
+		color: $color__text-main;
 	}
 }
 
@@ -254,12 +253,14 @@ figcaption,
 
 .wp-block-cover {
 
+	height: 70vh;
+
 	h2,
 	.wp-block-cover-text {
 		font-family: $font__heading;
-		font-size: $font__size-lg;
-		font-weight: bold;
-		line-height: 1.4;
+		font-size: $font__size-xl;
+		font-weight: 400;
+		line-height: 1.25;
 		padding-left: $size__spacing-unit;
 		padding-right: $size__spacing-unit;
 
@@ -280,7 +281,7 @@ figcaption,
 
 		h2,
 		.wp-block-cover-text {
-			font-size: $font__size-xl;
+			font-size: $font__size-xxxxl;
 		}
 	}
 }
@@ -578,10 +579,33 @@ figcaption,
 
 // Remove spacing between consecutive Media & Text blocks.
 [data-type="core/media-text"] {
-	background: $color__background-screen;
+
+	.wp-block-media-text {
+		background: $color__background-screen;
+
+		a {
+			color: $color__text-main;
+		}
+
+		@include media(tablet) {
+			// Modify the default 50-50 proportion between image and text.
+			grid-template-columns: 60% auto !important; /* !important to override inline styles */
+
+			&.has-media-on-the-right {
+				grid-template-columns: auto 60% !important; /* !important to override inline styles */
+			}
+		}
+	}
 
 	& + [data-type="core/media-text"] {
 		margin-top: -32px;
+	}
+
+	.editor-block-list__layout {
+		border-left: 2px solid $color__border;
+		margin-left: 0;
+		margin-right: 0;
+		padding-left: 0.25em;
 	}
 }
 

@@ -16,9 +16,8 @@ if ( ! function_exists( 'dusk2019_setup' ) ) :
  * as indicating support for post thumbnails.
  */
 function dusk2019_setup() {
-	/*
-	 * Probably not necessary
-	 */
+	// Switches Gutenberg controls to work against a dark background.
+	add_theme_support( 'dark-editor-style' );
 }
 endif; // dusk2019_setup
 add_action( 'after_setup_theme', 'dusk2019_setup' );
@@ -73,6 +72,11 @@ function dusk2019_block_editor_scripts() {
 	 * Block Editor Scripts
 	 */
 	//wp_enqueue_script( 'dusk2019-block-editor-filters', get_theme_file_uri( '/js/block-editor-filters.js' ), array(), '1.0', true );
+
+	/**
+	 * Fonts
+	 */
+	wp_enqueue_style( 'dusk2019-fonts', dusk2019_fonts_url(), array(), null );
 }
 add_action( 'enqueue_block_editor_assets', 'dusk2019_block_editor_scripts' );
 
