@@ -8,7 +8,7 @@
 	@include postContentMaxWidth();
 
 	@include media(tablet) {
-		margin: 32px auto;
+		margin: 44px auto;
 	}
 
 	> *:first-child {
@@ -115,6 +115,15 @@
 }
 
 .entry .entry-content {
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		text-align: center;
+	}
 
 	//! Paragraphs
 	p.has-background {
@@ -569,6 +578,8 @@
 			@include media(tablet) {
 				font-size: $font__size-xxxxl;
 				max-width: 100%;
+				margin-left: auto;
+				margin-right: auto;
 			}
 		}
 
@@ -662,16 +673,6 @@
 				padding-left: $font__size-sm;
 			}
 		}
-
-		/* Remove duplicate rule-line when a separator
-		 * is followed by an H1, or H2 */
-		& + h1,
-		& + h2 {
-
-			&:before {
-				display: none;
-			}
-		}
 	}
 
 	//! Twitter Embed
@@ -742,7 +743,7 @@
 		background: $color__background-screen;
 
 		& + .wp-block-media-text {
-			margin-top: -32px;
+			margin-top: -44px;
 		}
 
 		.wp-block-media-text__content {
