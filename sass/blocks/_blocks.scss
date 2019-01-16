@@ -241,7 +241,6 @@
 			color: $color__text-light;
 			font-family: $font__heading;
 			font-size: calc(#{$font__size_base} * #{$font__size-ratio});
-			font-weight: bold;
 			line-height: $font__line-height-heading;
 			padding-bottom: ( .75 * $size__spacing-unit );
 
@@ -473,6 +472,7 @@
 		}
 
 		cite {
+			color: $color__text-light;
 			/*
 			 * This requires a rem-based font size calculation instead of our normal em-based one,
 			 * because the cite tag sometimes gets wrapped in a p tag. This is equivalent to $font-size_xs.
@@ -521,7 +521,7 @@
 		}
 
 		.aligncenter {
-			
+
 			@include postContentMaxWidth();
 
 			@include media(tablet) {
@@ -642,6 +642,12 @@
 		text-align: center;
 	}
 
+	.wp-block-audio figcaption,
+	.wp-block-video figcaption,
+	.wp-block-image figcaption {
+		color: $color__text-light;
+	}
+
 	//! Separator
 	.wp-block-separator,
 	hr {
@@ -650,7 +656,7 @@
 		height: 2px;
 		margin-bottom: (2 * $size__spacing-unit);
 		margin-top: (2 * $size__spacing-unit);
-		max-width: 2.25em;
+		max-width: 5em;
 		text-align: left;
 
 		&.is-style-wide {
@@ -703,7 +709,6 @@
 			font-family: $font__heading;
 			line-height: $font__line-height-heading;
 			text-decoration: none;
-			font-weight: bold;
 			padding: ($size__spacing-unit * .75) $size__spacing-unit;
 			color: #fff;
 			margin-left: 0;
@@ -730,6 +735,7 @@
 	//! Code
 	.wp-block-code {
 		border-radius: 0;
+		color: $color__text-main;
 
 		code {
 			font-size: $font__size-md;
@@ -747,11 +753,8 @@
 		}
 
 		.wp-block-media-text__content {
-			border-left: 2px solid $color__border;
 
-			h1, h2, h3, h4, h5, h6 {
-				text-align: left;
-			}
+			border-left: 2px solid $color__border;
 
 			a,
 			a:hover {
@@ -772,10 +775,10 @@
 				margin-bottom: $size__spacing-unit;
 			}
 		}
-		
+
 		@include media(tablet) {
 			// Modify the default 50-50 proportion between image and text.
-			grid-template-columns: 60% auto; 
+			grid-template-columns: 60% auto;
 
 			.wp-block-media-text__content {
 				padding-left: 4.5%;
@@ -836,9 +839,9 @@
 
 		.wp-block-latest-comments__comment-meta {
 			font-family: $font__heading;
-			font-weight: bold;
 
 			.wp-block-latest-comments__comment-date {
+				color: $color__text-light;
 				font-weight: normal;
 			}
 		}
@@ -960,7 +963,7 @@
 	.has-dark-gray-color,
 	.wp-block-pullquote.is-style-solid-color blockquote.has-dark-gray-color,
 	.wp-block-pullquote.is-style-solid-color blockquote.has-dark-gray-color p {
-		color: $color__text-main;
+		color: $color__background-screen;
 	}
 
 	.has-light-gray-color,
