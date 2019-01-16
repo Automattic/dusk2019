@@ -60,6 +60,8 @@ function dusk2019_scripts() {
 	 */
 	wp_enqueue_style( 'dusk2019-fonts', dusk2019_fonts_url(), array(), null );
 
+	wp_enqueue_script( 'dusk2019-script', get_stylesheet_directory_uri() . '/js/functions.js', array( 'jquery' ), '20150302', true );
+
 }
 add_action( 'wp_enqueue_scripts', 'dusk2019_scripts' );
 
