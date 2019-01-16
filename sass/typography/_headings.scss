@@ -28,6 +28,15 @@ h6 {
 	font-family: $font__heading;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-align: center;
+}
+
 .page-description,
 .author-description .author-link,
 .not-found .page-title,
@@ -44,7 +53,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: 600;
+	font-weight: normal;
 	line-height: $font__line-height-heading;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -127,7 +136,7 @@ h6 {
 
 .page-description,
 .page-links a {
-	font-weight: bold;
+	font-weight: normal;
 }
 
 .site-description {
