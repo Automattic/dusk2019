@@ -32,7 +32,6 @@ body {
 		}
 
 		.wp-block[data-align="wide"] {
-			max-width: 994px; /* 964px + 30px for padding */
 			width: 100%;
 		}
 
@@ -53,6 +52,9 @@ body {
 
 .wp-block {
 	width: 680px; /* 650px plus 30px for padding */
+
+	@include postContentMaxWidth();
+
 	max-width: 100%;
 
 	// Only the top level blocks need specific widths, therefore override for every nested block.
@@ -91,35 +93,17 @@ h6 {
 
 h1 {
 	font-size: $font__size-xl;
-	@include post-section-dash;
 
 	@include media(tablet) {
 		font-size: $font__size-xxl;
-	}
-
-	&:before {
-		background-color: $color__border;
-		margin-left: auto;
-		margin-right: auto;
-		max-width: 110px;
-		width: 100%;
 	}
 }
 
 h2 {
 	font-size: $font__size-md;
-	@include post-section-dash;
 
 	@include media(tablet) {
 		font-size: $font__size-md;
-	}
-
-	&:before {
-		background-color: $color__border;
-		margin-left: auto;
-		margin-right: auto;
-		max-width: 110px;
-		width: 100%;
 	}
 }
 
@@ -144,7 +128,7 @@ a {
 	color: $color__link;
 
 	*:visited {
-
+		color: $color__link;
 	}
 
 	&:hover,
@@ -212,7 +196,9 @@ figcaption,
 	.editor-post-title__input {
 		font-family: $font__heading;
 		font-size: $font__size-md;
+		font-weight: normal;
 		color: $color__text-main;
+		text-align: center;
 	}
 }
 
@@ -360,7 +346,6 @@ figcaption,
 		line-height: 1.8;
 		font-family: $font__heading;
 		font-size: $font__size-sm;
-		font-weight: bold;
 	}
 
 	&:not(.is-style-outline) .wp-block-button__link {
@@ -425,7 +410,7 @@ figcaption,
 .wp-block-pullquote {
 	border-color: transparent;
 	border-width: 2px;
-	color: #000;
+	color: $color__text-main;
 
 	blockquote {
 		margin-top: calc(3 * #{ $size__spacing-unit});
@@ -566,13 +551,26 @@ figcaption,
 
 .wp-block-verse,
 .wp-block-verse pre {
+	color: $color__text-main;
 	padding: 0;
 }
 
 /** === Code === */
 
 .wp-block-code {
-	border-radius: 0;
+	.editor-plain-text {
+		background-color: transparent;
+		border-radius: 0;
+		color: $color__text-main;
+	}
+}
+
+/** === Preformatted === */
+
+.wp-block-preformatted {
+	pre {
+		color: $color__text-main;
+	}
 }
 
 /** === Media & Text === */
@@ -623,12 +621,12 @@ figcaption,
 .wp-block-separator {
 
 	&:not(.is-style-dots) {
-		border-bottom: 2px solid $color__text-light;
+		border-bottom: 2px solid $color__border;
 	}
 
 	&:not(.is-style-wide):not(.is-style-dots) {
-		width: $font__size-xl;
-		margin-left: 0;
+		max-width: 5em;
+		margin-left: auto;
 	}
 
 	&.is-style-dots:before {
@@ -663,7 +661,6 @@ ul.wp-block-archives,
 		color: $color__text-light;
 		font-family: $font__heading;
 		font-size: calc(#{$font__size_base} * #{$font__size-ratio});
-		font-weight: bold;
 		line-height: $font__line-height-heading;
 		padding-bottom: ( .75 * $size__spacing-unit );
 
@@ -699,23 +696,23 @@ ul.wp-block-archives,
 
 /** === Latest Posts grid view === */
 .wp-block-latest-posts.is-grid {
-		li {
-			border-top: 2px solid $color__border;
-			padding-top: (1 * $size__spacing-unit);
-			margin-bottom: (2 * $size__spacing-unit);
-			a {
-				&:after {
-					content: '';
-				}
+	li {
+		border-top: 2px solid $color__border;
+		padding-top: (1 * $size__spacing-unit);
+		margin-bottom: (2 * $size__spacing-unit);
+		a {
+			&:after {
+				content: '';
 			}
-			&:last-child {
-				margin-bottom: auto;
-				a:after {
-					content: '';
-				}
+		}
+		&:last-child {
+			margin-bottom: auto;
+			a:after {
+				content: '';
 			}
 		}
 	}
+}
 
 /** === Latest Comments === */
 
@@ -723,7 +720,6 @@ ul.wp-block-archives,
 
 	.wp-block-latest-comments__comment-meta {
 		font-family: $font__heading;
-		font-weight: bold;
 
 		.wp-block-latest-comments__comment-date {
 			font-weight: normal;
@@ -737,6 +733,7 @@ ul.wp-block-archives,
 	}
 
 	.wp-block-latest-comments__comment-date {
+		color: $color__text-light;
 		font-size: $font__size-xs;
 	}
 }
@@ -747,12 +744,12 @@ ul.wp-block-archives,
 .wp-caption {
 	dd {
 		color: $color__text-light;
- 		font-size: $font__size-xs;
- 		font-family: $font__heading;
- 		line-height: $font__line-height-pre;
- 		margin: 0;
- 		padding: ( $size__spacing-unit * .5 );
- 		text-align: left;
+		font-size: $font__size-xs;
+		font-family: $font__heading;
+		line-height: $font__line-height-pre;
+		margin: 0;
+		padding: ( $size__spacing-unit * .5 );
+		text-align: left;
 		text-align: center;
 		-webkit-margin-start: 0px;
 		margin-inline-start: 0px;
