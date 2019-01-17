@@ -452,6 +452,15 @@ h6 {
   font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+}
+
 .page-description,
 .author-description .author-link,
 .not-found .page-title,
@@ -468,7 +477,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 600;
+  font-weight: normal;
   line-height: 1.2;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -553,7 +562,7 @@ h6 {
 
 .page-description,
 .page-links a {
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .site-description {
@@ -875,7 +884,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-  background: #111;
+  background: #c29e3d;
   cursor: pointer;
 }
 
@@ -893,7 +902,7 @@ button:focus,
 input[type="button"]:focus,
 input[type="reset"]:focus,
 input[type="submit"]:focus {
-  background: #111;
+  background: #c29e3d;
   outline: thin dotted;
   outline-offset: -4px;
 }
@@ -1002,6 +1011,7 @@ a:focus {
 .main-navigation {
   display: block;
   margin-top: 0.25rem;
+  width: 100%;
   /* Un-style buttons */
   /*
 	 * Sub-menu styles
@@ -1986,6 +1996,9 @@ body.page .main-navigation {
 }
 
 .site-branding {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   color: #cccccc;
   position: relative;
 }
@@ -1997,53 +2010,24 @@ body.page .main-navigation {
 }
 
 .site-logo {
-  position: relative;
-  z-index: 999;
-  margin-bottom: calc(.66 * 1rem);
-}
-
-@media only screen and (min-width: 768px) {
-  .site-logo {
-    margin-bottom: 0;
-    position: absolute;
-    left: calc(100% + (1.25 * 1rem));
-    top: 4px;
-    z-index: 999;
-  }
+  margin-left: 1rem;
 }
 
 .site-logo .custom-logo-link {
-  border-radius: 100%;
   box-sizing: content-box;
-  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   display: block;
-  width: 50px;
-  height: 50px;
   overflow: hidden;
-  transition: box-shadow 200ms ease-in-out;
 }
 
 .site-logo .custom-logo-link .custom-logo {
-  min-height: inherit;
-}
-
-.site-logo .custom-logo-link:hover, .site-logo .custom-logo-link:active, .site-logo .custom-logo-link:focus {
-  box-shadow: 0 0 0 2px black;
-}
-
-@media only screen and (min-width: 768px) {
-  .site-logo .custom-logo-link {
-    width: 64px;
-    height: 64px;
-  }
+  max-height: 60px;
+  width: auto;
 }
 
 .site-title {
-  margin: auto;
-  display: inline;
   color: #fff;
   font-size: 1.125em;
-  /* When there is no description set, make sure navigation appears below title. */
+  flex: 1 1 auto;
 }
 
 .site-title a {
@@ -2062,28 +2046,25 @@ body.page .main-navigation {
   margin: 0;
 }
 
-@media only screen and (min-width: 768px) {
-  .featured-image .site-title {
-    display: inline-block;
-  }
-}
-
-.site-title + .main-navigation {
-  display: block;
-}
-
-@media only screen and (min-width: 768px) {
-  .site-title {
-    display: inline;
-  }
-}
-
 .site-description {
-  display: inline;
+  text-align: left;
+  flex: 1 1 50%;
   color: #fff;
   font-size: 0.71111em;
   font-weight: normal;
   margin: 0;
+}
+
+.site-logo + .site-title + .site-description {
+  flex: 1 1 100%;
+  text-align: right;
+}
+
+@media only screen and (min-width: 1168px) {
+  .site-logo + .site-title + .site-description {
+    flex: 1 1 50%;
+    text-align: left;
+  }
 }
 
 .site-header.featured-image {
@@ -2095,7 +2076,6 @@ body.page .main-navigation {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
   /* add focus state to social media icons */
   /* Entry header */
-  /* Custom Logo Link */
   /* Make sure important elements are above pseudo elements used for effects. */
   /* Set up image filter layer positioning */
   /* Background & Effects */
@@ -2116,6 +2096,7 @@ body.page .main-navigation {
 .site-header.featured-image .social-navigation a,
 .site-header.featured-image .site-title a,
 .site-header.featured-image .site-featured-image a {
+  color: #fff;
   transition: opacity 110ms ease-in-out;
 }
 
@@ -2226,6 +2207,7 @@ body.page .main-navigation {
 
 .site-header.featured-image .site-featured-image .entry-header .entry-meta {
   font-weight: 500;
+  text-align: center;
 }
 
 .site-header.featured-image .site-featured-image .entry-header .entry-meta > span {
@@ -2274,15 +2256,6 @@ body.page .main-navigation {
     position: absolute;
     bottom: 100%;
   }
-}
-
-.site-header.featured-image .custom-logo-link {
-  background: #080808;
-  box-shadow: 0 0 0 0 rgba(8, 8, 8, 0);
-}
-
-.site-header.featured-image .custom-logo-link:hover, .site-header.featured-image .custom-logo-link:active, .site-header.featured-image .custom-logo-link:focus {
-  box-shadow: 0 0 0 2px #080808;
 }
 
 .site-header.featured-image .site-branding {
@@ -2416,14 +2389,15 @@ body.page .main-navigation {
 }
 
 .entry .entry-header {
-  margin: calc(3 * 1rem) 1rem 1rem;
+  margin: calc(3 * 1rem) auto 1rem;
   position: relative;
+  text-align: center;
 }
 
 @media only screen and (min-width: 768px) {
   .entry .entry-header {
     max-width: calc(6 * (100vw / 12) - 28px);
-    margin: calc(3 * 1rem) calc(10% + 60px) auto;
+    margin: calc(3 * 1rem) auto auto;
   }
 }
 
@@ -2443,6 +2417,7 @@ body.page .main-navigation {
 .entry .entry-footer {
   color: #cccccc;
   font-weight: 500;
+  text-align: center;
 }
 
 .entry .entry-meta > span,
@@ -2630,7 +2605,7 @@ body.page .main-navigation {
 }
 
 .entry .entry-content a.button:hover {
-  background: #111;
+  background: #c29e3d;
   color: #080808;
   cursor: pointer;
 }
@@ -3612,13 +3587,13 @@ body.page .main-navigation {
 
 .entry .entry-content .wp-block-button .wp-block-button__link:hover {
   color: white;
-  background: #111;
+  background: #c29e3d;
   cursor: pointer;
 }
 
 .entry .entry-content .wp-block-button .wp-block-button__link:focus {
   color: white;
-  background: #111;
+  background: #c29e3d;
   outline: thin dotted;
   outline-offset: -4px;
 }
@@ -3650,11 +3625,11 @@ body.page .main-navigation {
 
 .entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:hover {
   color: white;
-  border-color: #111;
+  border-color: #c29e3d;
 }
 
 .entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:hover:not(.has-background) {
-  color: #111;
+  color: #c29e3d;
 }
 
 .entry .entry-content .wp-block-archives,
@@ -3670,7 +3645,6 @@ body.page .main-navigation {
   color: #cccccc;
   font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: calc(22px * 1.125);
-  font-weight: bold;
   line-height: 1.2;
   padding-bottom: 0.75rem;
 }
@@ -3894,6 +3868,7 @@ body.page .main-navigation {
 }
 
 .entry .entry-content .wp-block-quote cite {
+  color: #cccccc;
   /*
 			 * This requires a rem-based font size calculation instead of our normal em-based one,
 			 * because the cite tag sometimes gets wrapped in a p tag. This is equivalent to $font-size_xs.
@@ -4106,6 +4081,12 @@ body.page .main-navigation {
   text-align: center;
 }
 
+.entry .entry-content .wp-block-audio figcaption,
+.entry .entry-content .wp-block-video figcaption,
+.entry .entry-content .wp-block-image figcaption {
+  color: #cccccc;
+}
+
 .entry .entry-content .wp-block-separator,
 .entry .entry-content hr {
   background-color: #333333;
@@ -4113,7 +4094,7 @@ body.page .main-navigation {
   height: 2px;
   margin-bottom: 2rem;
   margin-top: 2rem;
-  max-width: 2.25em;
+  max-width: 5em;
   text-align: right;
 }
 
@@ -4190,7 +4171,6 @@ body.page .main-navigation {
   font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   line-height: 1.2;
   text-decoration: none;
-  font-weight: bold;
   padding: 0.75rem 1rem;
   color: #fff;
   margin-right: 0;
@@ -4205,18 +4185,19 @@ body.page .main-navigation {
 }
 
 .entry .entry-content .wp-block-file .wp-block-file__button:hover {
-  background: #111;
+  background: #c29e3d;
   cursor: pointer;
 }
 
 .entry .entry-content .wp-block-file .wp-block-file__button:focus {
-  background: #111;
+  background: #c29e3d;
   outline: thin dotted;
   outline-offset: -4px;
 }
 
 .entry .entry-content .wp-block-code {
   border-radius: 0;
+  color: #fff;
 }
 
 .entry .entry-content .wp-block-code code {
@@ -4300,10 +4281,10 @@ body.page .main-navigation {
 
 .entry .entry-content .wp-block-latest-comments .wp-block-latest-comments__comment-meta {
   font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-weight: bold;
 }
 
 .entry .entry-content .wp-block-latest-comments .wp-block-latest-comments__comment-meta .wp-block-latest-comments__comment-date {
+  color: #cccccc;
   font-weight: normal;
 }
 
@@ -4430,7 +4411,7 @@ body.page .main-navigation {
 .entry .entry-content .has-dark-gray-color,
 .entry .entry-content .wp-block-pullquote.is-style-solid-color blockquote.has-dark-gray-color,
 .entry .entry-content .wp-block-pullquote.is-style-solid-color blockquote.has-dark-gray-color p {
-  color: #fff;
+  color: #1c1c1c;
 }
 
 .entry .entry-content .has-light-gray-color,
