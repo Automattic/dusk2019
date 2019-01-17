@@ -51,11 +51,16 @@ body {
 /** === Content Width === */
 
 .wp-block {
-	width: 680px; /* 650px plus 30px for padding */
-
-	@include postContentMaxWidth();
-
+	width: calc(100vw - (2 * #{$size__spacing-unit}));
 	max-width: 100%;
+
+	@include media(tablet) {
+		width: calc(8 * (100vw / 12));
+	}
+
+	@include media(desktop) {
+		width: calc(6 * (100vw / 12 ));
+	}
 
 	// Only the top level blocks need specific widths, therefore override for every nested block.
 	.wp-block {
@@ -87,7 +92,7 @@ h4,
 h5,
 h6 {
 	font-family: $font__heading;
-	font-weight: 400;
+	font-weight: 600;
 	text-align: center
 }
 
@@ -195,10 +200,14 @@ figcaption,
 
 	.editor-post-title__input {
 		font-family: $font__heading;
-		font-size: $font__size-md;
-		font-weight: normal;
+		font-size: $font__size-lg;
+		font-weight: 600;
 		color: $color__text-main;
 		text-align: center;
+
+		@include media(tablet) {
+			font-size: $font__size-xl;
+		}
 	}
 }
 
