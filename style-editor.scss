@@ -608,11 +608,13 @@ figcaption,
 		margin-top: -44px;
 	}
 
-	.editor-block-list__layout {
-		border-left: 2px solid $color__border;
-		margin-left: 0;
-		margin-right: 0;
-		padding-left: 0.25em;
+	@include media(desktop) {
+		.editor-block-list__layout {
+			border-left: 2px solid $color__border;
+			margin-left: 0;
+			margin-right: 0;
+			padding-left: 0.25em;
+		}
 	}
 }
 
