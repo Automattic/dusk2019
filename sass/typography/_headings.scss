@@ -28,15 +28,6 @@ h6 {
 	font-family: $font__heading;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	text-align: center;
-}
-
 .page-description,
 .author-description .author-link,
 .not-found .page-title,
@@ -53,7 +44,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: normal;
+	font-weight: 600;
 	line-height: $font__line-height-heading;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -71,15 +62,15 @@ h6 {
 	line-height: 1.25;
 }
 
+.entry-title,
 h1 {
-	font-size: $font__size-xl;
+	font-size: $font__size-lg;
 
 	@include media(tablet) {
-		font-size: $font__size-xxl;
+		font-size: $font__size-xl;
 	}
 }
 
-.entry-title,
 .not-found .page-title,
 .error-404 .page-title,
 .has-larger-font-size,
