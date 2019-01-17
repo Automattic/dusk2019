@@ -87,3 +87,8 @@ add_action( 'enqueue_block_editor_assets', 'dusk2019_block_editor_scripts' );
  */
 //require get_stylesheet_directory() . '/inc/jetpack.php';
 
+/**
+ * Customizer additions.
+ */
+require get_stylesheet_directory() . '/inc/customizer.php';
+
