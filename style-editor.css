@@ -441,11 +441,12 @@ figcaption,
         /* !important to override inline styles */ } }
 [data-type="core/media-text"] + [data-type="core/media-text"] {
   margin-top: -44px; }
-[data-type="core/media-text"] .editor-block-list__layout {
-  border-left: 2px solid #333333;
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: 0.25em; }
+@media only screen and (min-width: 1168px) {
+  [data-type="core/media-text"] .editor-block-list__layout {
+    border-left: 2px solid #333333;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0.25em; } }
 
 /** === Table === */
 .wp-block-table td, .wp-block-table th {
