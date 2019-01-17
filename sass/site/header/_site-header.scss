@@ -86,20 +86,16 @@
 // Site description
 
 .site-description {
-	text-align: right;
-	flex: 1 1 50%;
+	flex: initial;
 	color: $color__text-main;
 	font-size: $font__size-xs;
 	font-weight: normal;
-	margin: 0;
 
 	.site-logo + .site-title + & {
 		flex: 1 1 100%;
-		text-align: left;
 
 		@include media( desktop ) {
-			flex: 1 1 50%;
-			text-align: right
+			flex: initial;
 		}
 	}
 }
