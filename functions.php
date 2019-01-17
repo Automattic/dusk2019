@@ -18,9 +18,25 @@ if ( ! function_exists( 'dusk2019_setup' ) ) :
 function dusk2019_setup() {
 	// Switches Gutenberg controls to work against a dark background.
 	add_theme_support( 'dark-editor-style' );
+
+	/**
+	 * Add support for core custom logo.
+	 *
+	 * @link https://codex.wordpress.org/Theme_Logo
+	 */
+	add_theme_support(
+		'custom-logo',
+		array(
+			'height'      => 120,
+			'width'       => 190,
+			'flex-width'  => true,
+			'flex-height' => false,
+			'header-text' => array( 'site-title' ),
+		)
+	);
 }
 endif; // dusk2019_setup
-add_action( 'after_setup_theme', 'dusk2019_setup' );
+add_action( 'after_setup_theme', 'dusk2019_setup', 30 );
 
 function dusk2019_fonts_url() {
 
