@@ -99,6 +99,28 @@ function dusk2019_block_editor_scripts() {
 add_action( 'enqueue_block_editor_assets', 'dusk2019_block_editor_scripts' );
 
 /**
+ * Filter default color from Twenty Nineteen.
+ */
+
+// Our filter callback function
+function dusk2019_primary_color_hue() {
+	return 44;
+}
+add_filter( 'twentynineteen_default_hue', 'dusk2019_primary_color_hue' );
+
+// Our filter callback function
+function dusk2019_primary_color_saturation() {
+	return 52;
+}
+add_filter( 'twentynineteen_default_saturation', 'dusk2019_primary_color_saturation' );
+
+// Our filter callback function
+function dusk2019_primary_color_lightness() {
+	return 57;
+}
+add_filter( 'twentynineteen_default_lightness', 'dusk2019_primary_color_lightness' );
+
+/**
  * Load Jetpack compatibility file.
  */
 //require get_stylesheet_directory() . '/inc/jetpack.php';
