@@ -31,6 +31,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
+	justify-content: space-between;
 
 	color: $color__text-light;
 	position: relative;
@@ -90,12 +91,4 @@
 	color: $color__text-main;
 	font-size: $font__size-xs;
 	font-weight: normal;
-
-	.site-logo + .site-title + & {
-		flex: 1 1 100%;
-
-		@include media( desktop ) {
-			flex: initial;
-		}
-	}
 }

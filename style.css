@@ -1998,6 +1998,7 @@ body.page .main-navigation {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
   color: #cccccc;
   position: relative;
 }
@@ -2050,16 +2051,6 @@ body.page .main-navigation {
   color: #fff;
   font-size: 0.71111em;
   font-weight: normal;
-}
-
-.site-logo + .site-title + .site-description {
-  flex: 1 1 100%;
-}
-
-@media only screen and (min-width: 1168px) {
-  .site-logo + .site-title + .site-description {
-    flex: initial;
-  }
 }
 
 .site-header.featured-image {
