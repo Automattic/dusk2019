@@ -4,10 +4,12 @@
 
 	.widget-area,
 	.site-info {
-		margin: calc(2 * #{$size__spacing-unit}) auto;
-		max-width: 100%;
-
+		margin: calc(2 * #{$size__spacing-unit}) $size__spacing-unit;
 		@include postContentMaxWidth();
+
+		@include media(tablet) {
+			margin: calc(1.5 * #{$size__spacing-unit}) auto;
+		}
 	}
 
 	.widget-column {
