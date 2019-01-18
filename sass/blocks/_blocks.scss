@@ -482,7 +482,7 @@
 
 		&.is-large,
 		&.is-style-large {
-			margin: $size__spacing-unit 0;
+			margin: $size__spacing-unit auto;
 			padding: 0;
 			border-left: none;
 
@@ -502,7 +502,7 @@
 			}
 
 			@include media(tablet) {
-				margin: $size__spacing-unit 0;
+				margin: $size__spacing-unit auto;
 				padding: $size__spacing-unit 0;
 
 				p {
@@ -563,6 +563,7 @@
 
 		@include media(tablet) {
 			padding: $size__spacing-unit 10%;
+			min-height: 60vh;
 		}
 
 		.wp-block-cover-image-text,
@@ -576,7 +577,7 @@
 			color: #fff;
 
 			@include media(tablet) {
-				font-size: $font__size-xxxxl;
+				font-size: $font__size-xxl;
 				max-width: 100%;
 				margin-left: auto;
 				margin-right: auto;
@@ -608,6 +609,7 @@
 				.wp-block-cover-text,
 				h2 {
 					padding: 0;
+					font-size: $font__size-xxxxl;
 				}
 			}
 		}
@@ -862,6 +864,7 @@
 
 	//! Latest Comments
 	.wp-block-latest-comments {
+		padding-left: 0;
 
 		.wp-block-latest-comments__comment-meta {
 			font-family: $font__heading;
