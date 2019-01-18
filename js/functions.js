@@ -8,7 +8,7 @@
 	    $window           = $( window ),
 	    mastheadHeight    = $( '#masthead' ).outerHeight( true ),
 	    coverImage        = $( '.home.page .entry-content > .wp-block-cover' ),
-	    entryHeaderHeight = $( '.home.page .entry > .entry-header' ).outerHeight( true ),
+	    entryHeaderHeight = $body.is( '.hide-homepage-title' ) ? 0 : $( '.home.page .entry > .entry-header' ).outerHeight( true ),
 	    coverImageHeight  = coverImage.height(),
 	    windowWidth       = window.innerWidth,
 	    toolbarHeight,
