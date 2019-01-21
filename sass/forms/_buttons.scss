@@ -2,7 +2,10 @@
 button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"] {
+input[type="submit"],
+.site-main #infinite-handle span button,
+.site-main #infinite-handle span button:hover,
+.site-main #infinite-handle span button:focus {
 
 	@include button-transition;
 	background: $color__background-button;
@@ -12,6 +15,7 @@ input[type="submit"] {
 	color: $color__background-body;
 	font-family: $font__heading;
 	font-size: $font__size-sm;
+	font-weight: 400;
 	line-height: $font__line-height-heading;
 	outline: none;
 	padding: ( $size__spacing-unit * .76 ) $size__spacing-unit;
