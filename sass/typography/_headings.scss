@@ -92,7 +92,6 @@ h3 {
 .page-description,
 .comment-author .fn,
 .no-comments,
-h2.author-title,
 p.author-bio,
 h4 {
 	font-size: $font__size-sm;
@@ -128,10 +127,6 @@ h6 {
 .page-description,
 .page-links a {
 	font-weight: normal;
-}
-
-.site-description {
-	letter-spacing: -0.01em;
 }
 
 .post-navigation .post-title,

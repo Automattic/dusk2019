@@ -248,13 +248,12 @@ figcaption,
 /** === Cover === */
 
 .wp-block-cover {
-
-	min-height: 60vh;
+	min-height: 80vh;
 
 	h2,
 	.wp-block-cover-text {
 		font-family: $font__heading;
-		font-weight: 600;
+		font-weight: 700;
 		line-height: 1.25;
 		padding-left: $size__spacing-unit;
 		padding-right: $size__spacing-unit;
@@ -302,16 +301,18 @@ figcaption,
 
 .wp-block[data-type="core/cover"][data-align="wide"],
 .wp-block[data-type="core/cover"][data-align="full"] {
-
 	@include media(tablet) {
-
 		h2,
 		.wp-block-cover-text {
+			font-size: $font__size-xxxxl;
 			max-width: calc(8 * (100vw / 12));
 		}
 	}
+}
 
-	@include media(desktop) {
+.wp-block[data-type="core/cover"][data-align="wide"] {
+
+	@include media(tablet) {
 
 		h2,
 		.wp-block-cover-text {
@@ -327,13 +328,6 @@ figcaption,
 		.wp-block-cover {
 			padding-left: calc(10% + 64px);
 			padding-right: calc(10% + 64px);
-
-			h2,
-			.wp-block-cover-text {
-				@include media(tablet) {
-					font-size: $font__size-xxxxl;
-				}
-			}
 		}
 	}
 }
@@ -358,6 +352,7 @@ figcaption,
 		line-height: 1.8;
 		font-family: $font__heading;
 		font-size: $font__size-sm;
+		font-weight: 600;
 	}
 
 	&:not(.is-style-outline) .wp-block-button__link {
@@ -546,7 +541,7 @@ figcaption,
 		display: table;
 		line-height: 1.8;
 		font-size: $font__size-sm;
-		font-weight: bold;
+		font-weight: 600;
 		background-color: $color__link;
 		border-radius: 5px;
 	}
@@ -585,6 +580,7 @@ figcaption,
 	}
 }
 
+
 /** === Media & Text === */
 
 // Remove spacing between consecutive Media & Text blocks.
@@ -613,7 +609,7 @@ figcaption,
 
 	@include media(desktop) {
 		.editor-block-list__layout {
-			border-left: 2px solid $color__border;
+			border-left: 2px solid rgba(255,255,255,0.15);
 			margin-left: 0;
 			margin-right: 0;
 			padding-left: 0.25em;

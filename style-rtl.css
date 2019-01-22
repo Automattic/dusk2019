@@ -518,7 +518,6 @@ h3 {
 .page-description,
 .comment-author .fn,
 .no-comments,
-h2.author-title,
 p.author-bio,
 h4 {
   font-size: 0.88889em;
@@ -554,10 +553,6 @@ h6 {
 .page-description,
 .page-links a {
   font-weight: normal;
-}
-
-.site-description {
-  letter-spacing: -0.01em;
 }
 
 .post-navigation .post-title,
@@ -854,10 +849,7 @@ table th {
 button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"],
-.site-main #infinite-handle span button,
-.site-main #infinite-handle span button:hover,
-.site-main #infinite-handle span button:focus {
+input[type="submit"] {
   transition: background 150ms ease-in-out;
   background: #caab57;
   border: none;
@@ -866,7 +858,7 @@ input[type="submit"],
   color: #080808;
   font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 0.88889em;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.2;
   outline: none;
   padding: 0.76rem 1rem;
@@ -878,10 +870,7 @@ input[type="submit"],
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
-input[type="submit"]:hover,
-.site-main #infinite-handle span button:hover,
-.site-main #infinite-handle span button:hover:hover,
-.site-main #infinite-handle span button:focus:hover {
+input[type="submit"]:hover {
   background: #c29e3d;
   cursor: pointer;
 }
@@ -890,10 +879,7 @@ input[type="submit"]:hover,
 button:visited,
 input[type="button"]:visited,
 input[type="reset"]:visited,
-input[type="submit"]:visited,
-.site-main #infinite-handle span button:visited,
-.site-main #infinite-handle span button:hover:visited,
-.site-main #infinite-handle span button:focus:visited {
+input[type="submit"]:visited {
   color: #080808;
   text-decoration: none;
 }
@@ -902,10 +888,7 @@ input[type="submit"]:visited,
 button:focus,
 input[type="button"]:focus,
 input[type="reset"]:focus,
-input[type="submit"]:focus,
-.site-main #infinite-handle span button:focus,
-.site-main #infinite-handle span button:hover:focus,
-.site-main #infinite-handle span button:focus:focus {
+input[type="submit"]:focus {
   background: #c29e3d;
   outline: thin dotted;
   outline-offset: -4px;
@@ -976,8 +959,12 @@ form p {
   margin: 1rem 0;
 }
 
+label {
+  font-weight: 600;
+}
+
 .contact-form label {
-  font-weight: 400 !important;
+  font-weight: 600 !important;
 }
 
 .contact-form label span {
@@ -1975,7 +1962,7 @@ body.page .main-navigation {
 ## Header
 --------------------------------------------------------------*/
 .site-header {
-  padding: 1em;
+  padding: 1rem;
 }
 
 .site-header.featured-image {
@@ -1992,7 +1979,6 @@ body.page .main-navigation {
 @media only screen and (min-width: 768px) {
   .site-header {
     margin: 0;
-    padding: 1rem 0;
   }
   .site-header.featured-image {
     min-height: 100vh;
@@ -2009,14 +1995,8 @@ body.page .main-navigation {
   position: relative;
 }
 
-@media only screen and (min-width: 768px) {
-  .site-branding {
-    margin: 0 calc(10% + 60px);
-  }
-}
-
 .site-logo {
-  margin-left: 1rem;
+  margin-left: 0.5rem;
 }
 
 .site-logo .custom-logo-link {
@@ -2060,7 +2040,7 @@ body.page .main-navigation {
   color: #fff;
   font-size: 0.71111em;
   font-weight: normal;
-  margin: 0;
+  margin: 0.27rem 0 0;
 }
 
 .site-header.featured-image {
@@ -2643,10 +2623,6 @@ body.page .main-navigation {
 }
 
 /* Author description */
-.author-bio {
-  margin: calc(2 * 1rem) 1rem 1rem;
-}
-
 @media only screen and (min-width: 768px) {
   .author-bio {
     max-width: calc(8 * (100vw / 12) - 28px);
@@ -2661,27 +2637,12 @@ body.page .main-navigation {
 
 @media only screen and (min-width: 768px) {
   .author-bio {
-    margin: calc(3 * 1rem) calc(10% + 60px);
-  }
-}
-
-@media only screen and (min-width: 1168px) {
-  .author-bio {
-    margin: calc(3 * 1rem) calc(10% + 60px);
+    margin: calc(3 * 1rem) 0;
   }
 }
 
 .author-bio .author-title {
   display: inline;
-}
-
-.author-bio .author-title:before {
-  background: #cccccc;
-  content: "\020";
-  display: block;
-  height: 2px;
-  margin: 1rem 0;
-  width: 1em;
 }
 
 .author-bio .author-description {
@@ -3582,6 +3543,7 @@ body.page .main-navigation {
   border: none;
   font-size: 0.88889em;
   font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
   line-height: 1.2;
   box-sizing: border-box;
   font-size: 0.88889em;
@@ -3997,7 +3959,7 @@ body.page .main-navigation {
 .entry .entry-content .wp-block-cover h2 {
   font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 2.25em;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.25;
   padding: 0;
   color: #fff;
@@ -4032,25 +3994,46 @@ body.page .main-navigation {
 }
 
 @media only screen and (min-width: 768px) {
-  .entry .entry-content .wp-block-cover-image.alignfull .wp-block-cover-image-text,
-  .entry .entry-content .wp-block-cover-image.alignfull .wp-block-cover-text,
-  .entry .entry-content .wp-block-cover-image.alignfull h2,
-  .entry .entry-content .wp-block-cover.alignfull .wp-block-cover-image-text,
-  .entry .entry-content .wp-block-cover.alignfull .wp-block-cover-text,
-  .entry .entry-content .wp-block-cover.alignfull h2 {
+  .entry .entry-content .wp-block-cover-image.alignwide .wp-block-cover-image-text,
+  .entry .entry-content .wp-block-cover-image.alignwide .wp-block-cover-text,
+  .entry .entry-content .wp-block-cover-image.alignwide h2,
+  .entry .entry-content .wp-block-cover.alignwide .wp-block-cover-image-text,
+  .entry .entry-content .wp-block-cover.alignwide .wp-block-cover-text,
+  .entry .entry-content .wp-block-cover.alignwide h2 {
     max-width: calc(8 * (100vw / 12) - 28px);
   }
 }
 
 @media only screen and (min-width: 1168px) {
-  .entry .entry-content .wp-block-cover-image.alignfull .wp-block-cover-image-text,
-  .entry .entry-content .wp-block-cover-image.alignfull .wp-block-cover-text,
-  .entry .entry-content .wp-block-cover-image.alignfull h2,
-  .entry .entry-content .wp-block-cover.alignfull .wp-block-cover-image-text,
-  .entry .entry-content .wp-block-cover.alignfull .wp-block-cover-text,
-  .entry .entry-content .wp-block-cover.alignfull h2 {
+  .entry .entry-content .wp-block-cover-image.alignwide .wp-block-cover-image-text,
+  .entry .entry-content .wp-block-cover-image.alignwide .wp-block-cover-text,
+  .entry .entry-content .wp-block-cover-image.alignwide h2,
+  .entry .entry-content .wp-block-cover.alignwide .wp-block-cover-image-text,
+  .entry .entry-content .wp-block-cover.alignwide .wp-block-cover-text,
+  .entry .entry-content .wp-block-cover.alignwide h2 {
     max-width: calc(6 * (100vw / 12) - 28px);
   }
+}
+
+@media only screen and (min-width: 768px) {
+  .entry .entry-content .wp-block-cover-image.alignwide .wp-block-cover-image-text,
+  .entry .entry-content .wp-block-cover-image.alignwide .wp-block-cover-text,
+  .entry .entry-content .wp-block-cover-image.alignwide h2,
+  .entry .entry-content .wp-block-cover.alignwide .wp-block-cover-image-text,
+  .entry .entry-content .wp-block-cover.alignwide .wp-block-cover-text,
+  .entry .entry-content .wp-block-cover.alignwide h2 {
+    padding: 0;
+    font-size: 4.5em;
+  }
+}
+
+.entry .entry-content .wp-block-cover-image.alignfull .wp-block-cover-image-text,
+.entry .entry-content .wp-block-cover-image.alignfull .wp-block-cover-text,
+.entry .entry-content .wp-block-cover-image.alignfull h2,
+.entry .entry-content .wp-block-cover.alignfull .wp-block-cover-image-text,
+.entry .entry-content .wp-block-cover.alignfull .wp-block-cover-text,
+.entry .entry-content .wp-block-cover.alignfull h2 {
+  max-width: calc(8 * (100vw / 12));
 }
 
 @media only screen and (min-width: 768px) {
@@ -4185,6 +4168,7 @@ body.page .main-navigation {
   background: #caab57;
   font-size: 22px;
   font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
   line-height: 1.2;
   text-decoration: none;
   padding: 0.75rem 1rem;
@@ -4256,13 +4240,9 @@ body.page .main-navigation {
   color: #fff;
 }
 
-.entry .entry-content .wp-block-media-text .wp-block-media-text__content :last-child {
-  margin-bottom: 1.5em;
-}
-
 @media only screen and (min-width: 1168px) {
   .entry .entry-content .wp-block-media-text .wp-block-media-text__content {
-    border-right: 2px solid #333333;
+    border-right: 2px solid rgba(255, 255, 255, 0.15);
   }
 }
 

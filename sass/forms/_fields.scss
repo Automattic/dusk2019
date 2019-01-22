@@ -57,10 +57,15 @@ form {
 	}
 
 }
+
+label {
+	font-weight: 600;
+}
+
 // Jetpack contact form block
 .contact-form {
 	label {
-		font-weight: 400 !important;
+		font-weight: 600 !important;
 
 		span {
 			color: $color__text-main !important;

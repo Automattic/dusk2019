@@ -170,6 +170,7 @@
 			border: none;
 			font-size: $font__size-sm;
 			font-family: $font__heading;
+			font-weight: 600;
 			line-height: $font__line-height-heading;
 			box-sizing: border-box;
 			font-size: $font__size-sm;
@@ -571,7 +572,7 @@
 		h2 {
 			font-family: $font__heading;
 			font-size: $font__size-xl;
-			font-weight: 600;
+			font-weight: 700;
 			line-height: 1.25;
 			padding: 0;
 			color: #fff;
@@ -593,12 +594,30 @@
 			}
 		}
 
-		&.alignfull {
+		&.alignwide {
 
 			.wp-block-cover-image-text,
 			.wp-block-cover-text,
 			h2 {
 				@include postContentMaxWidth();
+			}
+
+			@include media(tablet) {
+				.wp-block-cover-image-text,
+				.wp-block-cover-text,
+				h2 {
+					padding: 0;
+					font-size: $font__size-xxxxl;
+				}
+			}
+		}
+
+		&.alignfull {
+
+			.wp-block-cover-image-text,
+			.wp-block-cover-text,
+			h2 {
+				max-width: calc(8 * (100vw / 12));
 			}
 
 			@include media(tablet) {
@@ -709,6 +728,7 @@
 			background: $color__background-button;
 			font-size: $font__size-base;
 			font-family: $font__heading;
+			font-weight: 600;
 			line-height: $font__line-height-heading;
 			text-decoration: none;
 			padding: ($size__spacing-unit * .75) $size__spacing-unit;
@@ -785,12 +805,8 @@
 				color: #fff;
 			}
 
-			& :last-child {
-				margin-bottom: 1.5em;
-			}
-
 			@include media(desktop) {
-				border-left: 2px solid $color__border;
+				border-left: 2px solid rgba(255,255,255,0.15);
 			}
 		}
 
