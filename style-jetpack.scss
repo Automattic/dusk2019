@@ -10,7 +10,6 @@
 .site-main #infinite-handle span button,
 .site-main #infinite-handle span button:hover,
 .site-main #infinite-handle span button:focus {
-	@include button-transition;
 	background: $color__background-button;
 	border: none;
 	border-radius: 5px;
