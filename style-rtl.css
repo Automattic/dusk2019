@@ -855,7 +855,9 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
-.site-main #infinite-handle span button {
+.site-main #infinite-handle span button,
+.site-main #infinite-handle span button:hover,
+.site-main #infinite-handle span button:focus {
   transition: background 150ms ease-in-out;
   background: #caab57;
   border: none;
@@ -877,7 +879,9 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover,
-.site-main #infinite-handle span button:hover {
+.site-main #infinite-handle span button:hover,
+.site-main #infinite-handle span button:hover:hover,
+.site-main #infinite-handle span button:focus:hover {
   background: #c29e3d;
   cursor: pointer;
 }
@@ -887,7 +891,9 @@ button:visited,
 input[type="button"]:visited,
 input[type="reset"]:visited,
 input[type="submit"]:visited,
-.site-main #infinite-handle span button:visited {
+.site-main #infinite-handle span button:visited,
+.site-main #infinite-handle span button:hover:visited,
+.site-main #infinite-handle span button:focus:visited {
   color: #080808;
   text-decoration: none;
 }
@@ -897,16 +903,12 @@ button:focus,
 input[type="button"]:focus,
 input[type="reset"]:focus,
 input[type="submit"]:focus,
-.site-main #infinite-handle span button:focus {
+.site-main #infinite-handle span button:focus,
+.site-main #infinite-handle span button:hover:focus,
+.site-main #infinite-handle span button:focus:focus {
   background: #c29e3d;
   outline: thin dotted;
   outline-offset: -4px;
-}
-
-.site-main #infinite-handle span button:hover,
-.site-main #infinite-handle span button:focus {
-  font-weight: 400;
-  padding: 0.76rem 1rem;
 }
 
 input[type="text"],
