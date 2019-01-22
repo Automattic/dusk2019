@@ -123,7 +123,7 @@ add_filter( 'twentynineteen_default_lightness', 'dusk2019_primary_color_lightnes
 /**
  * Load Jetpack compatibility file.
  */
-//require get_stylesheet_directory() . '/inc/jetpack.php';
+require get_stylesheet_directory() . '/inc/jetpack.php';
 
 /**
  * Customizer additions.
