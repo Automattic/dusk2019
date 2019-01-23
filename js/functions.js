@@ -5,15 +5,15 @@
  */
 ( function( $ ) {
 	var $body             = $( document.body ),
-	    $window           = $( window ),
-	    mastheadHeight    = $( '#masthead' ).outerHeight( true ),
-	    coverImage        = $( '.home.page .entry-content > .wp-block-cover' ),
-	    entryHeaderHeight = $body.is( '.hide-homepage-title' ) ? 0 : $( '.home.page .entry > .entry-header' ).outerHeight( true ),
-	    coverImageHeight  = coverImage.height(),
-	    windowWidth       = window.innerWidth,
-	    toolbarHeight,
-	    resizeTimer;
-	
+		$window           = $( window ),
+		mastheadHeight    = $( '#masthead' ).outerHeight( true ),
+		coverImage        = $( '.home.page .entry-content > .wp-block-cover' ),
+		entryHeaderHeight = $body.is( '.hide-homepage-title' ) ? 0 : $( '.home.page .entry > .entry-header' ).outerHeight( true ),
+		coverImageHeight  = coverImage.height(),
+		windowWidth       = window.innerWidth,
+		toolbarHeight,
+		resizeTimer;
+
 	// Make Featured image full-screen.
 	function fullscreenCoverImage() {
 
@@ -29,7 +29,7 @@
 	}
 
 	$( document ).ready( function() {
-		$window.on( 'resize.dusk2019', function() {
+		$window.on( 'resize.sophisticatedbusiness', function() {
 			windowWidth = window.innerWidth;
 			clearTimeout( resizeTimer );
 			resizeTimer = setTimeout( function() {

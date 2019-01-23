@@ -1,13 +1,13 @@
 <?php
 /**
- * Dusk (Twenty Nineteen) functions and definitions.
+ * Sophisticated Business (Twenty Nineteen) functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Dusk_2019
+ * @package Sophisticated_Business
  */
 
-if ( ! function_exists( 'dusk2019_setup' ) ) :
+if ( ! function_exists( 'sophisticated_business_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -15,7 +15,7 @@ if ( ! function_exists( 'dusk2019_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function dusk2019_setup() {
+function sophisticated_business_setup() {
 	// Switches Gutenberg controls to work against a dark background.
 	add_theme_support( 'dark-editor-style' );
 
@@ -35,10 +35,10 @@ function dusk2019_setup() {
 		)
 	);
 }
-endif; // dusk2019_setup
-add_action( 'after_setup_theme', 'dusk2019_setup', 30 );
+endif; // sophisticated_business_setup
+add_action( 'after_setup_theme', 'sophisticated_business_setup', 30 );
 
-function dusk2019_fonts_url() {
+function sophisticated_business_fonts_url() {
 
 	$fonts_url = '';
 
@@ -46,7 +46,7 @@ function dusk2019_fonts_url() {
 	* supported by Open Sans, translate this to 'off'. Do not translate
 	* into your own language.
 	*/
-	$poppins = esc_html_x( 'on', 'Poppins font: on or off', 'dusk2019' );
+	$poppins = esc_html_x( 'on', 'Poppins font: on or off', 'sophisticated-business' );
 
 	if ( 'off' !== $poppins ) {
 		$font_families = array();
@@ -69,56 +69,56 @@ function dusk2019_fonts_url() {
 /**
  * Enqueue scripts and styles.
  */
-function dusk2019_scripts() {
+function sophisticated_business_scripts() {
 
 	/**
 	 * Styles
 	 */
-	wp_enqueue_style( 'dusk2019-fonts', dusk2019_fonts_url(), array(), null );
+	wp_enqueue_style( 'sophisticated-business-fonts', sophisticated_business_fonts_url(), array(), null );
 
-	wp_enqueue_script( 'dusk2019-script', get_stylesheet_directory_uri() . '/js/functions.js', array( 'jquery' ), '20150302', true );
+	wp_enqueue_script( 'sophisticated-business-script', get_stylesheet_directory_uri() . '/js/functions.js', array( 'jquery' ), '20150302', true );
 
 }
-add_action( 'wp_enqueue_scripts', 'dusk2019_scripts' );
+add_action( 'wp_enqueue_scripts', 'sophisticated_business_scripts' );
 
 /**
  * Enqueue supplemental block editor scripts.
  */
-function dusk2019_block_editor_scripts() {
+function sophisticated_business_block_editor_scripts() {
 
 	/**
 	 * Block Editor Scripts
 	 */
-	//wp_enqueue_script( 'dusk2019-block-editor-filters', get_theme_file_uri( '/js/block-editor-filters.js' ), array(), '1.0', true );
+	//wp_enqueue_script( 'sophisticated-business-block-editor-filters', get_theme_file_uri( '/js/block-editor-filters.js' ), array(), '1.0', true );
 
 	/**
 	 * Fonts
 	 */
-	wp_enqueue_style( 'dusk2019-fonts', dusk2019_fonts_url(), array(), null );
+	wp_enqueue_style( 'sophisticated-business-fonts', sophisticated_business_fonts_url(), array(), null );
 }
-add_action( 'enqueue_block_editor_assets', 'dusk2019_block_editor_scripts' );
+add_action( 'enqueue_block_editor_assets', 'sophisticated_business_block_editor_scripts' );
 
 /**
  * Filter default color from Twenty Nineteen.
  */
 
 // Our filter callback function
-function dusk2019_primary_color_hue() {
+function sophisticated_business_primary_color_hue() {
 	return 44;
 }
-add_filter( 'twentynineteen_default_hue', 'dusk2019_primary_color_hue' );
+add_filter( 'twentynineteen_default_hue', 'sophisticated_business_primary_color_hue' );
 
 // Our filter callback function
-function dusk2019_primary_color_saturation() {
+function sophisticated_business_primary_color_saturation() {
 	return 52;
 }
-add_filter( 'twentynineteen_default_saturation', 'dusk2019_primary_color_saturation' );
+add_filter( 'twentynineteen_default_saturation', 'sophisticated_business_primary_color_saturation' );
 
 // Our filter callback function
-function dusk2019_primary_color_lightness() {
+function sophisticated_business_primary_color_lightness() {
 	return 57;
 }
-add_filter( 'twentynineteen_default_lightness', 'dusk2019_primary_color_lightness' );
+add_filter( 'twentynineteen_default_lightness', 'sophisticated_business_primary_color_lightness' );
 
 /**
  * Load Jetpack compatibility file.

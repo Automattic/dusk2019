@@ -1,16 +1,16 @@
 <?php
 /**
- * Dusk 2019: Color Patterns
+ * Sophisticated Business: Color Patterns
  *
  * @package WordPress
- * @subpackage Dusk 2019
+ * @subpackage Sophisticated_Business
  * @since 1.0
  */
 
 /**
  * Generate the CSS for the current primary color.
  */
-function dusk2019_custom_colors_css() {
+function sophisticated_business_custom_colors_css() {
 
 	$primary_color = 199;
 	if ( 'default' !== get_theme_mod( 'primary_color', 'default' ) ) {
@@ -273,5 +273,5 @@ function dusk2019_custom_colors_css() {
 	 * @param int    $primary_color The user's selected color hue.
 	 * @param string $saturation    Filtered theme color saturation level.
 	 */
-	return apply_filters( 'dusk2019_custom_colors_css', $theme_css, $primary_color, $saturation );
+	return apply_filters( 'sophisticated_business_custom_colors_css', $theme_css, $primary_color, $saturation );
 }
