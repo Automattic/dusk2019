@@ -4271,6 +4271,10 @@ body.page .main-navigation {
   .entry .entry-content .wp-block-media-text.has-media-on-the-right {
     grid-template-columns: auto 60%;
   }
+  .entry .entry-content .wp-block-media-text.alignfull + .wp-block-media-text,
+  .entry .entry-content .wp-block-media-text + .wp-block-media-text.alignfull {
+    margin-top: -44px;
+  }
 }
 
 .entry .entry-content .wp-block-columns.alignfull {

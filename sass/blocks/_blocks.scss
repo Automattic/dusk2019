@@ -824,6 +824,10 @@
 			&.has-media-on-the-right {
 				grid-template-columns: auto 60%;
 			}
+
+			&.alignfull + .wp-block-media-text {
+				margin-top: -44px;
+			}
 		}
 	}
 
