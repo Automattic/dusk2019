@@ -102,23 +102,29 @@ add_action( 'enqueue_block_editor_assets', 'sophisticated_business_block_editor_
  * Filter default color from Twenty Nineteen.
  */
 
-// Our filter callback function
+// Our filter callback function - HUE
 function sophisticated_business_primary_color_hue() {
 	return 44;
 }
 add_filter( 'twentynineteen_default_hue', 'sophisticated_business_primary_color_hue' );
 
-// Our filter callback function
+// Our filter callback function - SATURATION
 function sophisticated_business_primary_color_saturation() {
 	return 52;
 }
 add_filter( 'twentynineteen_default_saturation', 'sophisticated_business_primary_color_saturation' );
 
-// Our filter callback function
+// Our filter callback function - LIGHTNESS
 function sophisticated_business_primary_color_lightness() {
 	return 57;
 }
 add_filter( 'twentynineteen_default_lightness', 'sophisticated_business_primary_color_lightness' );
+
+// Filter hover colour - lightness value
+function sophisticated_business_primary_color_lightness_hover() {
+	return 47;
+}
+add_filter( 'twentynineteen_default_lightness_hover', 'sophisticated_business_primary_color_lightness_hover' );
 
 /**
  * Load Jetpack compatibility file.
