@@ -591,8 +591,9 @@ figcaption,
 	.wp-block-media-text {
 		background: $color__background-screen;
 
-		a {
-			color: $color__text-main;
+		a,
+		a:hover {
+			color: inherit;
 		}
 
 		@include media(tablet) {

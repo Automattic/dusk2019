@@ -585,8 +585,9 @@ figcaption,
   background: #1c1c1c;
 }
 
-[data-type="core/media-text"] .wp-block-media-text a {
-  color: #fff;
+[data-type="core/media-text"] .wp-block-media-text a,
+[data-type="core/media-text"] .wp-block-media-text a:hover {
+  color: inherit;
 }
 
 @media only screen and (min-width: 768px) {

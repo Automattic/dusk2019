@@ -4263,7 +4263,7 @@ body.page .main-navigation {
 
 .entry .entry-content .wp-block-media-text .wp-block-media-text__content a,
 .entry .entry-content .wp-block-media-text .wp-block-media-text__content a:hover {
-  color: #fff;
+  color: inherit;
 }
 
 @media only screen and (min-width: 1168px) {
