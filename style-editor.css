@@ -94,6 +94,15 @@ h6 {
   text-align: center;
 }
 
+.wp-block .wp-block h1,
+.wp-block .wp-block h2,
+.wp-block .wp-block h3,
+.wp-block .wp-block h4,
+.wp-block .wp-block h5,
+.wp-block .wp-block h6 {
+  text-align: inherit;
+}
+
 h1 {
   font-size: 2.25em;
 }

@@ -94,7 +94,18 @@ h6 {
 	font-family: $font__heading;
 	font-weight: 600;
 	letter-spacing: 0;
-	text-align: center
+	text-align: center;
+}
+
+.wp-block .wp-block {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		text-align: inherit;
+	}
 }
 
 h1 {
