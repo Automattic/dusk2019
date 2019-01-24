@@ -113,12 +113,14 @@ function sophisticated_business_primary_color_saturation() {
 	return 52;
 }
 add_filter( 'twentynineteen_default_saturation', 'sophisticated_business_primary_color_saturation' );
+add_filter( 'twentynineteen_custom_colors_saturation', 'sophisticated_business_primary_color_saturation' );
 
 // Our filter callback function - LIGHTNESS
 function sophisticated_business_primary_color_lightness() {
 	return 57;
 }
 add_filter( 'twentynineteen_default_lightness', 'sophisticated_business_primary_color_lightness' );
+add_filter( 'twentynineteen_custom_colors_lightness', 'sophisticated_business_primary_color_lightness' );
 
 // Filter hover colour - lightness value
 function sophisticated_business_primary_color_lightness_hover() {
