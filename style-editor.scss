@@ -630,7 +630,7 @@ figcaption,
 .wp-block-separator {
 
 	&:not(.is-style-dots) {
-		border-bottom: 2px solid $color__border;
+		border-bottom: 2px solid $color__background-hr;
 	}
 
 	&:not(.is-style-wide):not(.is-style-dots) {
@@ -639,7 +639,7 @@ figcaption,
 	}
 
 	&.is-style-dots:before {
-		color: $color__text-light;
+		color: $color__background-hr;
 		font-size: $font__size-lg;
 		letter-spacing: calc(2 * #{$size__spacing-unit});
 		padding-left: calc(2 * #{$size__spacing-unit});
