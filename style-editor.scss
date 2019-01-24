@@ -348,6 +348,7 @@ figcaption,
 .wp-block-button {
 
 	.wp-block-button__link {
+		color: $color__background-body;
 		line-height: 1.8;
 		font-family: $font__heading;
 		font-size: $font__size-sm;
@@ -537,6 +538,7 @@ figcaption,
 	}
 
 	.wp-block-file__button {
+		color: $color__background-body;
 		display: table;
 		line-height: 1.8;
 		font-size: $font__size-sm;

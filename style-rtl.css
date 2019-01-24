@@ -3575,13 +3575,13 @@ body.page .main-navigation {
 }
 
 .entry .entry-content .wp-block-button .wp-block-button__link:hover {
-  color: white;
+  color: #080808;
   background: #c29e3d;
   cursor: pointer;
 }
 
 .entry .entry-content .wp-block-button .wp-block-button__link:focus {
-  color: white;
+  color: #080808;
   background: #c29e3d;
   outline: thin dotted;
   outline-offset: -4px;

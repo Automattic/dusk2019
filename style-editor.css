@@ -353,6 +353,7 @@ figcaption,
 
 /** === Button === */
 .wp-block-button .wp-block-button__link {
+  color: #080808;
   line-height: 1.8;
   font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 0.88889em;
@@ -544,6 +545,7 @@ figcaption,
 }
 
 .wp-block-file .wp-block-file__button {
+  color: #080808;
   display: table;
   line-height: 1.8;
   font-size: 0.88889em;
