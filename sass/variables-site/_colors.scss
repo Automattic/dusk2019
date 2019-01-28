@@ -5,7 +5,7 @@ $color__background-input: #fff;
 $color__background-screen: #1c1c1c;
 $color__background-hr: darken( #fff, 65% );
 $color__background-button: #caab57;
-$color__background-button-hover: darken( $color__link, 10% );
+$color__background-button-hover: darken(#caab57, 10%);
 $color__background-pre: #eee;
 $color__background-ins: #444;
 $color__background_selection: mix( $color__background-body, $color__background-button, 75% ); // lighten( salmon, 22.5% ); // lighten( #0999d4, 48% );
