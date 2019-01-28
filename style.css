@@ -5,7 +5,7 @@ Theme URI: https://github.com/automattic/themes
 Author: Automattic
 Author URI: https://automattic.com/
 Template: twentynineteen
-Description: A new Gutenberg-ready theme.
+Description: Your classy establishment needs an equally classy website to showcase your delicious food and special concoctions! With its bold typography and chic color scheme, Sophisticated Business exudes the same cool, intimate atmosphere as an upscale bar, lounge, or pub.
 Requires at least: WordPress 4.9.6
 Version: 1.0
 License: GNU General Public License v2 or later
@@ -872,7 +872,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-  background: #c29e3d;
+  background: #b59439;
   cursor: pointer;
 }
 
@@ -890,7 +890,7 @@ button:focus,
 input[type="button"]:focus,
 input[type="reset"]:focus,
 input[type="submit"]:focus {
-  background: #c29e3d;
+  background: #b59439;
   outline: thin dotted;
   outline-offset: -4px;
 }
@@ -2593,7 +2593,7 @@ body.page .main-navigation {
 }
 
 .entry .entry-content a.button:hover {
-  background: #c29e3d;
+  background: #b59439;
   color: #080808;
   cursor: pointer;
 }
@@ -3589,13 +3589,13 @@ body.page .main-navigation {
 
 .entry .entry-content .wp-block-button .wp-block-button__link:hover {
   color: #080808;
-  background: #c29e3d;
+  background: #b59439;
   cursor: pointer;
 }
 
 .entry .entry-content .wp-block-button .wp-block-button__link:focus {
   color: #080808;
-  background: #c29e3d;
+  background: #b59439;
   outline: thin dotted;
   outline-offset: -4px;
 }
@@ -3627,11 +3627,11 @@ body.page .main-navigation {
 
 .entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:hover {
   color: #fff;
-  border-color: #c29e3d;
+  border-color: #b59439;
 }
 
 .entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:hover:not(.has-background) {
-  color: #c29e3d;
+  color: #b59439;
 }
 
 .entry .entry-content .wp-block-archives,
@@ -4211,12 +4211,12 @@ body.page .main-navigation {
 }
 
 .entry .entry-content .wp-block-file .wp-block-file__button:hover {
-  background: #c29e3d;
+  background: #b59439;
   cursor: pointer;
 }
 
 .entry .entry-content .wp-block-file .wp-block-file__button:focus {
-  background: #c29e3d;
+  background: #b59439;
   outline: thin dotted;
   outline-offset: -4px;
 }
